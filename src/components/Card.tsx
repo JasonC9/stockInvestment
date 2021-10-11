@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import {Cards, Contain,Image} from './CardElements';
 import {NavBtn,NavBtnLink} from './NavbarElements';
 
