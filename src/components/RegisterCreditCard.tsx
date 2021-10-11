@@ -1,6 +1,6 @@
 import React from "react";
 
-function Register2() {
+function RegisterCreditCard() {
     return (
         <form>
             <label htmlFor="creditcard">Credit card number</label>
@@ -38,4 +38,4 @@ function Register2() {
     )
 }
 
-export default Register2;
+export default RegisterCreditCard;

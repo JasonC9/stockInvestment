@@ -1,6 +1,6 @@
 import React from "react";
 
-function Register1() {
+function RegisterUser() {
     return (
         <form>
             <label htmlFor="name">Name</label>
@@ -22,4 +22,4 @@ function Register1() {
     )
 }
 
-export default Register1;
+export default RegisterUser;
