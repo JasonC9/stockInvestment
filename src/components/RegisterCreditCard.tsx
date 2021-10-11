@@ -2,37 +2,56 @@ import React from "react";
 
 function RegisterCreditCard() {
     return (
-        <form>
+        <div>
+        <form className="card">
+            <h2 className="form_register">Register Account</h2>
+            <div className="form_input-group">
             <label htmlFor="creditcard">Credit card number</label>
-            <input type="text" placeholder="Enter your credit card number" />
+            <input className="form_input" type="number" placeholder="Enter your credit card number" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="cvc">CVC</label>
-            <input type="password" placeholder="Enter CVC number" />
+            <input className="form_input" type="password" placeholder="Enter CVC Number" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="month">Expire Month</label>
-            <input type="number" placeholder="Enter expire month" />
+            <input className="form_input" type="number" placeholder="Enter Expire Month" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="year">Expire Year</label>
-            <input type="number" placeholder="Enter expire year" />
+            <input className="form_input" type="number" placeholder="Enter Expire Year" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="street">Street Address</label>
-            <input type="text" placeholder="Enter street address" />
+            <input className="form_input" type="text" placeholder="Enter Street Address" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="city">City</label>
-            <input type="text" placeholder="Enter city" />
-
+            <input className="form_input" type="text" placeholder="Enter City" required/>
+            </div>
+           
+            <div className="form_input-group">
             <label htmlFor="state">State</label>
-            <input type="text" placeholder="Enter state" />
+            <input className="form_input" type="text" placeholder="Enter state" required />
+            </div>
 
+            <div className="form_input-group">
             <label htmlFor="zipcode">ZipCode</label>
-            <input type="number" placeholder="Enter zipcode" />
-          
-            <button type="submit">Register</button><br />
+            <input className="form_input" type="number" placeholder="Enter zipcode" required />
+            </div>
+           
+            <button className="btn" type="submit">Register</button><br />
 
-            <p id="form_text">
-                <a className="form_link" href="Login.tsx" id="linkLogin">Already have Account</a>
+            <p id="regiBtn">
+                <a className="form_link" href="#" id="linkLogin">Back</a>
             </p>
         </form>
+    </div>
 
 
     )
