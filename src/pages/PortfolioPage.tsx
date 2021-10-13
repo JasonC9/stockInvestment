@@ -11,7 +11,7 @@ export default function PortfolioPage(){
             <p>
                 This is the portfolio page.
             </p>
-            <Link to="/"> to login page </Link>
+            <Link to="/login"> to login page </Link>
             <Card />
         </div>
     )

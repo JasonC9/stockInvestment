@@ -39,8 +39,8 @@ function Login() {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        console.log(formData.username);
-        console.log(formData.password);
+        // console.log(formData.username);
+        // console.log(formData.password);
         await sendLogin(formData.username, formData.password);
     }
 
