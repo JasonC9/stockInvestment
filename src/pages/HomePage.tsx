@@ -9,12 +9,12 @@ export default function HomePage(){
     const history = useHistory();
 
     useEffect( () => {
-        async function checkAuth() {
+        (async () => {
             if (!await isAuthenticated()){
-                history.push("/");
+                console.log("checked auth")
+                history.push("/login");
             }
-        checkAuth();
-        }
+        })();
     }, []);
 
 

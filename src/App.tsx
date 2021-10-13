@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
@@ -22,7 +22,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/login">
             <LoginPage />
           </Route>
           <Route exact path="/mjinvestments/home">
@@ -33,6 +33,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <RegistrationPage />
+          </Route>
+          <Route path="/">
+            <Redirect to="/mjinvestments/home" />
           </Route>
         </Switch>
       </BrowserRouter> 
