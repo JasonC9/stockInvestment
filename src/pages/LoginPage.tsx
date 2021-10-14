@@ -6,10 +6,7 @@ export default function LoginPage(){
 
     return (
         <div>
-            <p>
-                This is the login page.
-            </p>
-            <Link to="/register"> to registration</Link>
+           
             <Login />
             
         </div>

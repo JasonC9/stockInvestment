@@ -60,8 +60,9 @@ function Login() {
             </div>
 
             <button className="btn" type="submit">Login</button>
+            <p id="form_text">Don't have an account </p>
             <p id="form_text">
-                <a className="form_link" href="#" id="linkCreateAccount">Create Account</a>
+                <a className="form_link" href="/register" id="linkCreateAccount">Create Account</a>
             </p>
         </form>
         </div>

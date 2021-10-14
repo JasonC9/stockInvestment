@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import RegistrationPage from './pages/RegistrationPage';
+import CreditcardPage from './pages/CreditcardPage';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <RegistrationPage />
+          </Route>
+          <Route exact path="/creditCard">
+            <CreditcardPage />
           </Route>
           <Route path="/">
             <Redirect to="/mjinvestments/home" />

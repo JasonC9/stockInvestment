@@ -1,6 +1,7 @@
 import React from "react";
 import './Login.css';
 
+
 function RegisterCreditCard() {
     return (
         <div>
@@ -47,10 +48,11 @@ function RegisterCreditCard() {
             </div>
            
             <button className="btn" type="submit">Register</button><br />
-
+            
             <p id="regiBtn">
-                <a className="form_link" href="#" id="linkLogin">Back</a>
+                <a className="form_link" href="/register" id="linkLogin">Back</a>
             </p>
+           
         </form>
     </div>
 

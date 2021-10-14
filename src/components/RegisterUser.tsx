@@ -1,5 +1,7 @@
 import React from "react";
 import './Login.css';
+import { Link } from 'react-router-dom';
+import { useHistory } from "react-router";
 
 function RegisterUser() {
     return (
@@ -20,11 +22,14 @@ function RegisterUser() {
                 <label htmlFor="password">Password</label>
                 <input className="form_input" type="password" placeholder="Enter password" required/>
                 </div>
-                
+                <Link to="/creditCard">
                 <button className="btn" type="submit">Next</button><br />
+                </Link>
                 <p id="form_text">
-                    <a className="form_link" href="Login.tsx" id="linkLogin">Already have Account</a>
+                <a className="form_link" href="/login" id="linkCreateAccount">Already have account</a>
                 </p>
+
+              
             </form>
         </div>
 
