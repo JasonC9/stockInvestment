@@ -11,7 +11,7 @@ export default function HomePage(){
     useEffect( () => {
         (async () => {
             if (!await isAuthenticated()){
-                console.log("checked auth")
+                // console.log("checked auth")
                 history.push("/login");
             }
         })();
