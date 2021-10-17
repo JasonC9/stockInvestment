@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import { logout } from '../utilities/authenticationUtils';
-import {Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink,Testing} from './NavbarElements';
+import {HomeLogo,Button,Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink,Testing} from './NavbarElements';
 
 function Navbar() {
 
@@ -19,18 +19,17 @@ function Navbar() {
     return(
         <div>
             <Nav>
-                <NavLink to="/mjinvestments/home"></NavLink>
-                <Testing>MJ Investments</Testing>
+                <NavBtn>
+                    <NavBtnLink to='/mjinvestments/portfolio'>Profile</NavBtnLink>
+                </NavBtn>
                 <Bars />
                 <NavMenu>
+                    <HomeLogo/>
                     <NavLink to="/mjinvestments/home">Home</NavLink>
                     <NavLink to="/mjinvestments/portfolio">My Portfolio</NavLink>
                     <NavLink to="/">Third</NavLink>
-                    <button onClick={handleLogout}> Logout </button>
+                    <Button onClick={handleLogout}> Logout </Button>
                 </NavMenu>
-                <NavBtn>
-                    <NavBtnLink to='/profile'>Profile</NavBtnLink>
-                </NavBtn>
             </Nav>
         </div>
     )

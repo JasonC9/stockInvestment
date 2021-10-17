@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
 
+
 export default function HomePage(){
 
     const history = useHistory();

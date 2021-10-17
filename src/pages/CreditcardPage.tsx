@@ -1,4 +1,3 @@
-
 import RegisterCreditCard from '../components/RegisterCreditCard';
 
 export default function CreditcardPage(){
