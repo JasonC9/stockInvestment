@@ -3,13 +3,10 @@ import { Link, useHistory } from 'react-router-dom';
 import Card from '../components/Card';
 import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
+import {Grid} from "@material-ui/core";
 
-<<<<<<< HEAD
 
 export default function HomePage(){
-=======
-export default function HomePage() {
->>>>>>> e1d12be76202b2e80b42ab4eb358340b506abb24
 
     const history = useHistory();
 
@@ -25,6 +22,10 @@ export default function HomePage() {
 
     return (
         <div>
+            <div style={{backgroundImage: `url("https://cdn.wallpapersafari.com/91/34/kTOp1P.jpg")`,
+            backgroundRepeat: `no-repeat`,
+            backgroundSize: `1920px 720px`
+            }}>
             <Navbar />
             <p>
                 This is the home page.
@@ -32,7 +33,26 @@ export default function HomePage() {
             <Link to="/mjinvestments/portfolio"> to portfolio page</Link>
             <br />
             <Link to="/mjinvestments/stocktest"> to stock test page</Link>
+
+
+            <Grid container spacing={4}>
+                <Grid item xs={12} sm={6} md={4}>
             <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+            <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+            <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+            <Card />
+            </Grid>
+            
+            </Grid>
+
+
+            </div>
         </div>
     )
 }

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Cards =styled.nav`
   background-color: #B2DACD;
     display: grid;
-    grid-template-rows: max-content 200px 1fr;
+    grid-template-rows: max-content 100px 1fr;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10px;
-    width 18rem;
-    padding: 40px;
+    width 17rem;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
   `
