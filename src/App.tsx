@@ -40,7 +40,7 @@ function App() {
             <CreditcardPage />
           </Route>
           <Route exact path="/mjinvestments/stocktest">
-            <StockPage />
+            <StockPage stock_id={1} />
           </Route>
           <Route path="/">
             <Redirect to="/mjinvestments/home" />
