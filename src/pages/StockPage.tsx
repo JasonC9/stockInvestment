@@ -54,6 +54,6 @@ export default function StockPage(props: any) {
                 </Row>
             </Container>
 
-        </div>
+        </div >
     )
 }

@@ -28,8 +28,8 @@ function App() {
   //   .then(message => setMessage(message));
   // });
 
-const [users, setUsers] = useState<IState["users"]>([])
-  
+  const [users, setUsers] = useState<IState["users"]>([])
+
   return (
     <div>
       <BrowserRouter>
@@ -50,7 +50,7 @@ const [users, setUsers] = useState<IState["users"]>([])
             <CreditcardPage />
           </Route>
           <Route exact path="/mjinvestments/stocktest">
-            <StockPage stock_id={1} />
+            <StockPage stock_id={2} />
           </Route>
           <Route path="/">
             <Redirect to="/mjinvestments/home" />
