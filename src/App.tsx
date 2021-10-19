@@ -9,6 +9,14 @@ import PortfolioPage from './pages/PortfolioPage';
 import RegistrationPage from './pages/RegistrationPage';
 import CreditcardPage from './pages/CreditcardPage';
 
+export interface IState {
+  users: {
+    name: string
+    username: string
+    password: string
+  }[]
+}
+
 
 function App() {
   // const [message, setMessage] = useState("");
@@ -19,6 +27,8 @@ function App() {
   //   .then(message => setMessage(message));
   // });
 
+const [users, setUsers] = useState<IState["users"]>([])
+  
   return (
     <div>
       <BrowserRouter>
