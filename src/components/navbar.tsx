@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import { logout } from '../utilities/authenticationUtils';
-import {HomeLogo,Button,Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink,Testing} from './NavbarElements';
+import { HomeLogo, Button, Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Testing } from './NavbarElements';
 
 function Navbar() {
 
@@ -16,7 +16,7 @@ function Navbar() {
     }
 
 
-    return(
+    return (
         <div>
             <Nav>
                 <NavBtn>
@@ -24,7 +24,7 @@ function Navbar() {
                 </NavBtn>
                 <Bars />
                 <NavMenu>
-                    <HomeLogo/>
+                    <HomeLogo />
                     <NavLink to="/mjinvestments/home">Home</NavLink>
                     <NavLink to="/mjinvestments/portfolio">My Portfolio</NavLink>
                     <NavLink to="/">Third</NavLink>
