@@ -3,15 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.24",
     "@types/node": "^12.20.28",
     "@types/react": "^17.0.27",
+    "@types/react-bootstrap": "^0.32.27",
     "@types/react-dom": "^17.0.9",
+<<<<<<< HEAD
     "axios": "^0.23.0",
+=======
+    "bootstrap": "^5.1.1",
+>>>>>>> 3b63bf7095b8054ecbc747266c1b30f0ede351a7
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-rc.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",

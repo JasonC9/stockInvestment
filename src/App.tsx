@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import RegistrationPage from './pages/RegistrationPage';
 import CreditcardPage from './pages/CreditcardPage';
+import StockPage from './pages/StockPage';
 
 export interface IState {
   users: {
@@ -48,11 +49,14 @@ const [users, setUsers] = useState<IState["users"]>([])
           <Route exact path="/creditCard">
             <CreditcardPage />
           </Route>
+          <Route exact path="/mjinvestments/stocktest">
+            <StockPage stock_id={1} />
+          </Route>
           <Route path="/">
             <Redirect to="/mjinvestments/home" />
           </Route>
         </Switch>
-      </BrowserRouter> 
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { NavLink as Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {FaBars} from 'react-icons/fa';
+import logo from '../mjlogo.jpg'
 
 export const Nav=styled.nav`
     background: #000;
     height: 80px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;justify-content: space-between;
     z-index: 10;
     `
     export const NavLink=styled(Link)`
@@ -14,14 +14,19 @@ export const Nav=styled.nav`
     display: flex;
     align-items:center;
     text-decoration: none;
-    padding: 4rem;
+    padding: 8rem;
     height: 100%;
     cursor: pointer;
-    padding-left: 60px;
-    &.active{
-        color: #15cdfc;
-        font-size: 24px;
-    }
+    color: #15cdfc;
+    font-size: 24px;
+    `
+  export const HomeLogo=styled.img.attrs({
+    src: `${logo}`
+  })`
+    width:400px;
+    height: 100px;
+    border-radius: 4px;
+    border-color: coral;
     `
     export const Bars = styled(FaBars)`
         display:none;
@@ -31,12 +36,13 @@ export const Nav=styled.nav`
     export const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: -24px;
+    padding-right: 60px;
     `
     export const NavBtn = styled.nav`
     display:flex;
     align-items: center;
     margin-right: 24px;
+    padding-left: 20px;
     `
     export const NavBtnLink=styled(Link)`
     border-radius: 4px;
@@ -54,4 +60,11 @@ export const Nav=styled.nav`
     font-style: italic;
     color: #15cdfc;
     font-size: 24px;
-  `;
+  `
+    export const Button=styled.button`
+    color: #fff;
+    background-color: #256ce1;
+    display:flex;
+    align-items: center;
+    padding: 10px 22px;
+    `;
