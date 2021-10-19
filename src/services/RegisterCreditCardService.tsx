@@ -8,7 +8,7 @@ class RegisterCreditCardService {
     }
 
     create(customer: ICreditCardData) {
-        return hibernate.post("/creditcard", customer);
+        return hibernate.post("/creditcard");
     }
 }
 
