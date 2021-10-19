@@ -8,7 +8,7 @@ export default function StockInfoBox(props: any) {
         <div>
             <Card>
                 <Card.Body>
-                    <h1> {props.stock.name} </h1>
+                    <h1> {props.stock.stockName} </h1>
                     <br />
                     <p> Price per stock: ${props.stock.price} </p>
                 </Card.Body>
