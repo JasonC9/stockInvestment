@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navb from '../components/navbar';
-=======
 import React, { useEffect, useState } from 'react';
 import { Container, Col, Row, Image } from 'react-bootstrap';
 import Navbar from '../components/navbar';
->>>>>>> 986dd8e90843336ed3345c2d9f52be6f434e5f57
 import StockInfoBox from '../components/StockInfoBox';
 
 export default function StockPage(props: any) {
@@ -35,13 +30,6 @@ export default function StockPage(props: any) {
 
     return (
         <div>
-<<<<<<< HEAD
-            <Navb/>
-            <p> {testStock.imgsrc} </p>
-            <br />
-            <StockInfoBox stock={testStock} />
-            <p> {testStock.description} </p>
-=======
             <Navbar />
             <Container>
                 <Row>
@@ -65,7 +53,6 @@ export default function StockPage(props: any) {
                     </Col>
                 </Row>
             </Container>
->>>>>>> 986dd8e90843336ed3345c2d9f52be6f434e5f57
 
         </div>
     )

@@ -32,7 +32,7 @@ function RegisterCreditCard() {
     };
 
 
-    const register = (e: any): void => {
+    const register = (e: any) => {
         if(!input.creditCardNumber || !input.cvc || !input.expireMonth || !input.expireYear || !input.streetAddress || !input.city || !input.state || !input.zipCode)
         {
             return
@@ -42,7 +42,7 @@ function RegisterCreditCard() {
         let customer = {creditCardNumber: input.creditCardNumber, cvc: input.cvc, expireMonth: input.expireMonth, expireYear: input.expireYear, streetAddress: input.streetAddress, city: input.city, state: input.state, zipCode: input.zipCode};
         console.log('customer' + JSON.stringify(customer));
         
-        RegisterCreditCardService.create(customer).then(res =>{
+        RegisterCreditCardService.create(customer).then(() => {
             history.push('/login');
         })
         

@@ -1,13 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import { logout } from '../utilities/authenticationUtils';
-<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar,Nav,NavDropdown,Container} from 'react-bootstrap';
 import logo from '../mjlogo.jpg';
-=======
-import { HomeLogo, Button, Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Testing } from './NavbarElements';
->>>>>>> 986dd8e90843336ed3345c2d9f52be6f434e5f57
+import { HomeLogo, Button, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Testing } from './NavbarElements';
 
 function Navb() {
 
