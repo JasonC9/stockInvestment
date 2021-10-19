@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar';
+import Navb from '../components/navbar';
 import StockInfoBox from '../components/StockInfoBox';
 
 export default function StockPage() {
@@ -13,7 +13,7 @@ export default function StockPage() {
 
     return (
         <div>
-            <Navbar />
+            <Navb/>
             <p> {testStock.imgsrc} </p>
             <br />
             <StockInfoBox stock={testStock} />

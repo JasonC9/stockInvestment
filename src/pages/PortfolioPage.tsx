@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../components/Card';
-import Navbar from '../components/navbar';
+import Navb from '../components/navbar';
 import Profile from '../components/Profile';
 
 export default function PortfolioPage(){
 
     return (
         <div>
-            <Navbar/>
+            <Navb/>
             <p>
                 This is the portfolio page.
             </p>
