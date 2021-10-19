@@ -18,7 +18,7 @@ function RegisterCreditCard() {
         streetAddress: "",
         city: "",
         state: "",
-        zipCode: "",
+        zipcode: "",
     }
 
     const [input, setInput] = useState(creditCardFormData);
@@ -33,18 +33,24 @@ function RegisterCreditCard() {
 
 
     const register = (e: any) => {
-        if(!input.creditCardNumber || !input.cvc || !input.expireMonth || !input.expireYear || !input.streetAddress || !input.city || !input.state || !input.zipCode)
+        if(!input.creditCardNumber || !input.cvc || !input.expireMonth || !input.expireYear || !input.streetAddress || !input.city || !input.state || !input.zipcode)
         {
             return
         }
 
         e.preventDefault();
-        let customer = {creditCardNumber: input.creditCardNumber, cvc: input.cvc, expireMonth: input.expireMonth, expireYear: input.expireYear, streetAddress: input.streetAddress, city: input.city, state: input.state, zipCode: input.zipCode};
+        let customer = {creditCardNumber: input.creditCardNumber, cvc: input.cvc, expireMonth: input.expireMonth, expireYear: input.expireYear, streetAddress: input.streetAddress, city: input.city, state: input.state, zipcode: input.zipcode};
         console.log('customer' + JSON.stringify(customer));
-        
-        RegisterCreditCardService.create(customer).then(() => {
+
+        let response = fetch("/creditcard", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(customer)})
+        .then(() => {
             history.push('/login');
-        })
+        });
+        
+        // RegisterCreditCardService.create(customer).then(() => {
+        //     history.push('/login');
+        // })
+        
         
     }
 
@@ -97,7 +103,7 @@ function RegisterCreditCard() {
 
             <div className="form_input-group">
             <label htmlFor="zipcode">ZipCode</label>
-            <input className="form_input" type="number" name="zipCode" placeholder="Enter zipcode" required value={input.zipCode} 
+            <input className="form_input" type="number" name="zipcode" placeholder="Enter zipcode" required value={input.zipcode} 
             onChange={handleChange}/>
             </div>
            
