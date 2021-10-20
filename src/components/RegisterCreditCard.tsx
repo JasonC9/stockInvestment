@@ -4,8 +4,6 @@ import { isConstructorDeclaration } from "typescript";
 import RegisterCreditCardService from "../services/RegisterCreditCardService";
 import './Login.css';
 
-    
-
 function RegisterCreditCard() {
 
     const history = useHistory();
@@ -31,7 +29,6 @@ function RegisterCreditCard() {
         });
     };
 
-
     const register = (e: any) => {
         if(!input.creditCardNumber || !input.cvc || !input.expireMonth || !input.expireYear || !input.streetAddress || !input.city || !input.state || !input.zipcode)
         {
@@ -45,13 +42,7 @@ function RegisterCreditCard() {
         let response = fetch("/creditcard", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(customer)})
         .then(() => {
             history.push('/login');
-        });
-        
-        // RegisterCreditCardService.create(customer).then(() => {
-        //     history.push('/login');
-        // })
-        
-        
+        });   
     }
 
     
