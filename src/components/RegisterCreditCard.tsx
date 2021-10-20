@@ -107,7 +107,7 @@ function RegisterCreditCard() {
             onChange={handleChange}/>
             </div>
            
-            <button className="btn" type="submit" onClick={register}>Register</button><br />
+            <button className="btn_color" type="submit" onClick={register}>Register</button><br />
             
             <p id="regiBtn">
                 <a className="form_link" href="/register" id="linkLogin">Back</a>

@@ -59,7 +59,7 @@ function Login() {
             <input className="form_input" onChange={handleChange} name="password" type="password" placeholder="Password" required />
             </div>
 
-            <button className="btn" type="submit">Login</button>
+            <button className="btn_color" type="submit">Login</button>
             <p id="form_text">Don't have an account </p>
             <p id="form_text">
                 <a className="form_link" href="/register" id="linkCreateAccount">Create Account</a>
