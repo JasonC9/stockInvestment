@@ -9,6 +9,6 @@ export default interface ICreditCardData {
     streetAddress: string,
     city: string,
     state: string,
-    zipCode: string
+    zipcode: string
 
 }

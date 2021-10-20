@@ -28,10 +28,10 @@ function RegisterUser() {
         let user = {first_name: input.first_name, username: input.username, pass_word: input.pass_word, is_admin: 0 };
         console.log('user' + JSON.stringify(user));
 
-        let response = fetch("/user", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(user)})
-        .then(() => {
-            history.push('/creditCard');
-        });
+        fetch("/user", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(user)})
+        .then(response => response.text())
+        .then(id =>history.push(`/creditCard`)
+        );
     }
 
     return (
