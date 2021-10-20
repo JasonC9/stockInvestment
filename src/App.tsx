@@ -32,7 +32,6 @@ function App() {
 
   return (
     <div className="App">
-       <header className="App-header">
       <BrowserRouter>
         <Switch>
           <Route exact path="/login">
@@ -58,7 +57,6 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-      </header>
     </div>
   );
 }

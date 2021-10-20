@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
+//import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
+import "./Card.css";
+import {Cards, Contain,Image} from './CardElements';
+import {NavBtn,NavBtnLink} from './NavbarElements';
 // class Card
 // {
 //     companyPic: string;
@@ -22,26 +25,75 @@ import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
 //     }
     
 // }
-function CardC()
+
+
+
+function CardC(props:any)
 {
+    const testStock = {
+        stockName: "Company Name",
+        description: "This is a fun company please give us money! The company was founded by me when I was just 12 years old.",
+        price: 2,
+        img: "This is the image",
+        marketCap: 2102390,
+        totalInvested: 1230012
+    }
+    let cards=[];
+    
+    
+    const [stock, setStock] = useState(testStock)
+    
+    
+    useEffect(() => {
+        let url = `/stock/findById/${props.stock_id}`;
+        fetch(url,
+            {
+                method: "GET",
+                credentials: "include",
+            }).then(response => response.json())
+            .then(req_stock => setStock(req_stock)).then(last => console.log(stock)
+                );
+            },[]);
+
+
+
     return(
-            <Card style={{ width: '18rem'}}bg={'Secondary'}>
-        <Card.Img variant="top" src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png" />
-        <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-            Description Here
-            </Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-            <ListGroupItem>Total Invested:</ListGroupItem>
-            <ListGroupItem>Market Cap:</ListGroupItem>
-            <ListGroupItem>Price</ListGroupItem>
-        </ListGroup>
-        <Card.Body>
-            <Card.Link href="/mjinvestments/stocktest">To Stock Page</Card.Link>
-        </Card.Body>
-        </Card> 
+        <div>
+        <Cards>
+        <Contain>
+            <Image src={stock.img} alt='image1'/>
+            <p>
+                Description:{stock.description}
+            </p>
+        </Contain>
+        <Contain>
+            <p>
+                Total Invested: {stock.totalInvested}
+            </p>
+            <p>
+                Market Cap: {stock.marketCap}
+            </p>
+        </Contain>
+                <NavBtnLink to='/profile'>Price: {stock.price}</NavBtnLink>
+    </Cards>
+        </div>
+        //     <Card style={{ width: '18rem'}}bg={'Secondary'}>
+        // <Card.Img variant="top" src={stock.img} style={{width:`200px`}}/>
+        // <Card.Body>
+        //     <Card.Title>{stock.stockName}</Card.Title>
+        //     <Card.Text>
+        //     Description:{stock.description}
+        //     </Card.Text>
+        // </Card.Body>
+        // <ListGroup className="list-group-flush">
+        //     <ListGroupItem>Total Invested:{stock.totalInvested}</ListGroupItem>
+        //     <ListGroupItem>Market Cap:{stock.marketCap}</ListGroupItem>
+        //     <ListGroupItem>Price: {stock.price}</ListGroupItem>
+        // </ListGroup>
+        // <Card.Body>
+        //     <Card.Link href="/mjinvestments/stocktest">To Stock Page</Card.Link>
+        // </Card.Body>
+        // </Card> 
     )
 }
 export default CardC;
