@@ -36,7 +36,7 @@ function Navb() {
                             <NavDropdown.Item href="/mjinvestments/profile">Account Details</NavDropdown.Item>
                             {/* <NavDropdown.Item href="/mjinvestments/portfolio">Account</NavDropdown.Item> */}
                             <NavDropdown.Divider />
-                            <NavDropdown.Item OnClick={handleLogout}>Log Out</NavDropdown.Item>
+                            <NavDropdown.Item onClick={handleLogout}>Log Out</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

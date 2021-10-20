@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Cards, Contain,Image} from './CardElements';
-import {NavBtn,NavBtnLink} from './NavbarElements';
-
+import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
 // class Card
 // {
 //     companyPic: string;
@@ -24,26 +22,26 @@ import {NavBtn,NavBtnLink} from './NavbarElements';
 //     }
     
 // }
-function Card()
+function CardC()
 {
     return(
-        <Cards>
-            <Contain>
-                <Image src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png" alt='image1'/>
-                    Description:
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-            </Contain>
-            <Contain>
-                    Total Invested:
-                    <br></br>
-                    <br></br>
-                    Market Cap:
-            </Contain>
-                    <NavBtnLink to='/profile'>Price: $200</NavBtnLink>
-        </Cards>
+            <Card style={{ width: '18rem'}}bg={'Secondary'}>
+        <Card.Img variant="top" src="https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png" />
+        <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+            Description Here
+            </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+            <ListGroupItem>Total Invested:</ListGroupItem>
+            <ListGroupItem>Market Cap:</ListGroupItem>
+            <ListGroupItem>Price</ListGroupItem>
+        </ListGroup>
+        <Card.Body>
+            <Card.Link href="/mjinvestments/stocktest">To Stock Page</Card.Link>
+        </Card.Body>
+        </Card> 
     )
 }
-export default Card;
+export default CardC;
