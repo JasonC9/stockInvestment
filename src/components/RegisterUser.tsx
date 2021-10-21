@@ -40,20 +40,20 @@ function RegisterUser() {
                 <h2 className="form_register">Register User</h2>
                 <div className="form_input-group">
                 <label htmlFor="name">First Name</label>
-                <input className="form_input" name="first_name" placeholder="Full name"  value={input.first_name}
-                onChange={handleChange} required/>
+                <input className="form_input" name="first_name" placeholder="Enter first name" required value={input.first_name}
+                onChange={handleChange}/>
                 </div>
 
                 <div className="form_input-group">
                 <label htmlFor="username">Username</label>
-                <input className="form_input" type="username" name="username" placeholder="Enter username"  value={input.username}
-                onChange={handleChange} required/>
+                <input className="form_input" type="username" name="username" placeholder="Enter username" required value={input.username}
+                onChange={handleChange} />
                 </div>
 
                 <div className="form_input-group">
                 <label htmlFor="password">Password</label>
-                <input className="form_input" type="password" name="pass_word" placeholder="Enter password"  value={input.pass_word}
-                onChange={handleChange} required/>
+                <input className="form_input" type="password" name="pass_word" placeholder="Enter password" required value={input.pass_word}
+                onChange={handleChange} />
                 </div>
                
                 <button className="btn_color" type="submit" onClick={next}>Next</button><br />

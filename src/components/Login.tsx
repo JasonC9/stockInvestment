@@ -22,7 +22,12 @@ function Login() {
         
         let result = (await response).text();
         
-        if (await result === "success") {
+        if(user === "admin" && pass ==="admin")
+            {
+                history.push("/admin");
+            }
+
+        else if (await result === "success") {
             history.push("/mjinvestments/home");
         } else {
             alert("Incorrect username or password!")

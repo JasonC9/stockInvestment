@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import { Col, Form, Row } from "react-bootstrap";
 import { useHistory } from "react-router";
-import { isConstructorDeclaration } from "typescript";
-import RegisterCreditCardService from "../services/RegisterCreditCardService";
 import './Login.css';
 
 function RegisterCreditCard() {
@@ -20,7 +19,6 @@ function RegisterCreditCard() {
     }
 
     const [input, setInput] = useState(creditCardFormData);
-
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput({
@@ -45,68 +43,75 @@ function RegisterCreditCard() {
         });   
     }
 
-    
     return (
-        <div>
-        <form className="card">
-            <h2 className="form_register">Register Account</h2>
-            <div className="form_input-group">
-            <label htmlFor="creditcard">Credit card number</label>
-            <input className="form_input" type="number" name="creditCardNumber" placeholder="Enter your credit card number" required value={input.creditCardNumber} 
-            onChange={handleChange} />
-            </div>
+        <Form className="cardCredit">
+             <h2 className="form_register">Register Account</h2>
+            <Row className="mb-3">
+                <Form.Group as={Col}>
+                <label htmlFor="creditcard">Credit card number</label>
+                <input className="form_input" type="number" name="creditCardNumber" placeholder="Enter credit card number" required value={input.creditCardNumber} 
+                onChange={handleChange} />
+                </Form.Group>
 
-            <div className="form_input-group">
-            <label htmlFor="cvc">CVC</label>
-            <input className="form_input" type="password" name="cvc" placeholder="Enter CVC Number" required value={input.cvc}
-            onChange={handleChange} />
-            </div>
+                <Form.Group as={Col}>
+                <label htmlFor="cvc">CVC</label>
+                <input className="form_input" type="password" name="cvc" placeholder="Enter CVC number" required value={input.cvc}
+                onChange={handleChange} />
+                </Form.Group>
+             </Row>
 
-            <div className="form_input-group">
-            <label htmlFor="month">Expire Month</label>
-            <input className="form_input" type="number" name="expireMonth" placeholder="Enter Expire Month" required value={input.expireMonth} 
-            onChange={handleChange}/>
-            </div>
+             <Row className="mb-3">
+                <Form.Group as={Col}>
+                <label htmlFor="creditcard">Expire Month</label>
+                <input className="form_input" type="number" name="expireMonth" placeholder="Enter expire month" required value={input.expireMonth} 
+                onChange={handleChange} />
+                </Form.Group>
 
-            <div className="form_input-group">
-            <label htmlFor="year">Expire Year</label>
-            <input className="form_input" type="number" name="expireYear" placeholder="Enter Expire Year" required value={input.expireYear}
-            onChange={handleChange} />
-            </div>
-
-            <div className="form_input-group">
-            <label htmlFor="street">Street Address</label>
-            <input className="form_input" type="text" name="streetAddress" placeholder="Enter Street Address" required value={input.streetAddress}
-            onChange={handleChange} />
-            </div>
-
-            <div className="form_input-group">
-            <label htmlFor="city">City</label>
-            <input className="form_input" type="text" name="city" placeholder="Enter City" required value={input.city}
-            onChange={handleChange}/>
-            </div>
+                <Form.Group as={Col}>
+                <label htmlFor="year">Expire Year</label>
+                <input className="form_input" type="number" name="expireYear" placeholder="Enter expire year" required value={input.expireYear}
+                onChange={handleChange} />
+                </Form.Group>
+            </Row>
            
-            <div className="form_input-group">
-            <label htmlFor="state">State</label>
-            <input className="form_input" type="text" name="state" placeholder="Enter state" required value={input.state}
-            onChange={handleChange} />
-            </div>
+            <Form.Group className="mb-3">
+                <label htmlFor="street">Street Address</label>
+                <input className="form_input" type="text" name="streetAddress" placeholder="Enter street address" required value={input.streetAddress}
+                onChange={handleChange} />
+            </Form.Group>
 
-            <div className="form_input-group">
-            <label htmlFor="zipcode">ZipCode</label>
-            <input className="form_input" type="number" name="zipcode" placeholder="Enter zipcode" required value={input.zipcode} 
-            onChange={handleChange}/>
-            </div>
-           
+            <Row className="mb-3">
+                <Form.Group as={Col}>
+                <label htmlFor="city">City</label>
+                <input className="form_input" type="text" name="city" placeholder="Enter City" required value={input.city}
+                onChange={handleChange}/>
+                </Form.Group>
+
+                <Form.Group as={Col}>
+                <label htmlFor="state">State</label>
+                <input className="form_input" type="text" name="state" placeholder="Enter state" required value={input.state}
+                onChange={handleChange} />
+                </Form.Group>
+
+                <Form.Group as={Col}>
+                <label htmlFor="zipcode">ZipCode</label>
+                <input className="form_input" type="number" name="zipcode" placeholder="Enter zipcode" required value={input.zipcode} 
+                onChange={handleChange}/>
+                </Form.Group>
+            </Row>
+
+            <Form.Group className="mb-3">
+                <input type="checkbox" required/>
+                <label htmlFor="agree">Agree to submit</label>  
+            </Form.Group>
+
             <button className="btn_color" type="submit" onClick={register}>Register</button><br />
             
             <p id="regiBtn">
                 <a className="form_link" href="/register" id="linkLogin">Back</a>
             </p>
-           
-        </form>
-    </div>
-    )
+    </Form>
+        )
 }
 
 export default RegisterCreditCard;
