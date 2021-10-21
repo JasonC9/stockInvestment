@@ -10,7 +10,7 @@ import RegistrationPage from './pages/RegistrationPage';
 import CreditcardPage from './pages/CreditcardPage';
 import StockPage from './pages/StockPage';
 import AdminPage from './pages/AdminPage';
-import AddFromPage from './pages/AddFormPage';
+import AddFormPage from './pages/AddFormPage';
 
 export interface IState {
   users: {
@@ -34,7 +34,6 @@ function App() {
 
   return (
     <div>
-      
       <BrowserRouter>
         <Switch>
           <Route exact path="/login">
@@ -44,7 +43,7 @@ function App() {
             <AdminPage />
           </Route>
           <Route exact path="/admin/add">
-            <AddFromPage />
+            <AddFormPage />
           </Route>
           <Route exact path="/mjinvestments/home">
             <HomePage />
@@ -66,7 +65,6 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-     
     </div>
   );
 }
