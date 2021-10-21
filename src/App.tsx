@@ -57,8 +57,8 @@ function App() {
           <Route exact path="/creditCard">
             <CreditcardPage />
           </Route>
-          <Route exact path="/mjinvestments/stocktest">
-            <StockPage stock_id={2} />
+          <Route path="/mjinvestments/stock/:id">
+            <StockPage />
           </Route>
           <Route path="/">
             <Redirect to="/mjinvestments/home" />

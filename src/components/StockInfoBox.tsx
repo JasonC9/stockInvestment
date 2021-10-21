@@ -10,7 +10,7 @@ export default function StockInfoBox(props: any) {
                 <Card.Body>
                     <h1> {props.stock.stockName} </h1>
                     <br />
-                    <p> Price per stock: ${props.stock.price} </p>
+                    <p> Minimum investment: ${props.stock.price} </p>
                 </Card.Body>
             </Card>
 

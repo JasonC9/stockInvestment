@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 //import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
 import "./Card.css";
-import {Cards, Contain,Image} from './CardElements';
-import {NavBtn,NavBtnLink} from './NavbarElements';
+import { Cards, Contain, Image } from './CardElements';
+import { NavBtn, NavBtnLink } from './NavbarElements';
 // class Card
 // {
 //     companyPic: string;
@@ -23,13 +23,12 @@ import {NavBtn,NavBtnLink} from './NavbarElements';
 //         this.totalInvested=totalInvested
 //         this.marketCap=marketCap
 //     }
-    
+
 // }
 
 
 
-function CardC(props:any)
-{
+function CardC(props: any) {
     const testStock = {
         stockName: "Company Name",
         description: "This is a fun company please give us money! The company was founded by me when I was just 12 years old.",
@@ -38,12 +37,12 @@ function CardC(props:any)
         marketCap: 2102390,
         totalInvested: 1230012
     }
-    let cards=[];
-    
-    
+    let cards = [];
+
+
     // const [stock, setStock] = useState(testStock)
-    
-    
+
+
     // useEffect(() => {
     //     let url = `/stock/findById/${props.stock_id}`;
     //     fetch(url,
@@ -57,25 +56,25 @@ function CardC(props:any)
 
 
 
-    return(
+    return (
         <div>
-        <Cards>
-        <Contain>
-            <Image src={props.stock.img} alt='image1'/>
-            <p>
+            <Cards>
+                <Contain>
+                    <Image src={props.stock.img} alt='image1' />
+                    {/* <p>
                 Description:{props.stock.description}
-            </p>
-        </Contain>
-        <Contain>
-            <p>
-                Total Invested: {props.stock.totalInvested}
-            </p>
-            <p>
-                Market Cap: {props.stock.marketCap}
-            </p>
-        </Contain>
-                <NavBtnLink to='/profile'>Price: {props.stock.price}</NavBtnLink>
-    </Cards>
+            </p> */}
+                </Contain>
+                <Contain>
+                    <p>
+                        Total Invested: ${props.stock.totalInvested}
+                    </p>
+                    <p>
+                        Market Cap: ${props.stock.marketCap}
+                    </p>
+                </Contain>
+                <NavBtnLink to={`/mjinvestments/stock/${props.stock.stockId}`}>Click to learn more!</NavBtnLink>
+            </Cards>
         </div>
         //     <Card style={{ width: '18rem'}}bg={'Secondary'}>
         // <Card.Img variant="top" src={stock.img} style={{width:`200px`}}/>
