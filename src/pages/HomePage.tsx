@@ -6,13 +6,25 @@ import { isAuthenticated } from '../utilities/authenticationUtils';
 import { Grid } from "@material-ui/core";
 import {InfoCard} from '../components/CardElements';
 
+
+
 export default function HomePage(props:any) {
 
+
+
+    function renderTable(cards:any)
+    {
+        return(
+            Object.entries(cards).forEach((fieldStock) => 
+            <Card stock={fieldStock}/>)
+        )
+    }
 
     const history = useHistory();
 
 
     const testStock = {
+        stock_id: 1,
         stockName: "Company Name",
         description: "This is a fun company please give us money! The company was founded by me when I was just 12 years old.",
         price: 2,
@@ -20,7 +32,9 @@ export default function HomePage(props:any) {
         marketCap: 2102390,
         totalInvested: 1230012
     }
-    let cards=[];
+    let cards: any[]=[];
+
+
 
     useEffect(() => {
         (async () => {
@@ -31,7 +45,28 @@ export default function HomePage(props:any) {
         })();
     }, []);
 
+    const [stocks, setStocks] = useState([])
 
+
+    useEffect(() => {
+        let url = `/stock/findAll`;
+        fetch(url,
+            {
+                method: "GET",
+                credentials: "include",
+            }).then(response => response.json())
+            .then(cards =>{setStocks(cards)
+            });
+            },[]);
+
+            // let checkStock=useState(testStock);
+            // const list=()=>{
+            //     return cards.map((checkStock)=>{
+            //         return(<div>Test{checkStock.stock_id}Test</div>)
+            //     })
+            // }
+
+            console.log(stocks)
     return (
         <div>
             <div style={{
@@ -39,6 +74,8 @@ export default function HomePage(props:any) {
                 backgroundRepeat: `no-repeat`,
                 backgroundSize: `1920px 720px`
             }}>
+
+
             <Navbar />
             <p>
                 This is the home page.
@@ -52,25 +89,44 @@ export default function HomePage(props:any) {
             </InfoCard>
             <br/>
             <Grid container spacing={4}>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={1} />
+
+            {/* <div className="stockI">
+            {
+            cards.map((arrStock)=>(
+                <Card stock_id={arrStock.stock_id}/>
+            ))}
+            </div> */}
+
+
+
+            {
+                stocks.map((stock)=>{return(
+                    <Grid item xs={6} sm={6} md={4}>
+                    <Card stock={stock}/>
+                    </Grid>
+                    )})
+
+            }
+
+
+
+
+            {/* {
+                renderTable(stocks);
+            } */}
             </Grid>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={2} />
-            </Grid>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={3} />
-            </Grid>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={2} />
-            </Grid>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={2} />
-            </Grid>
-            <Grid item xs={6} sm={6} md={4}>
-            <Card stock_id={2} />
-            </Grid>
-            </Grid>
+
+
+            
+
+
+            {/* <div>
+                {
+                    cards.map(({testStock})=>(
+                        <Card stock_id={testStock}></Card>
+                    ))
+                }
+                </div> */}
             </div>
         </div>
     )

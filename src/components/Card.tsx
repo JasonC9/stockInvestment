@@ -41,19 +41,19 @@ function CardC(props:any)
     let cards=[];
     
     
-    const [stock, setStock] = useState(testStock)
+    // const [stock, setStock] = useState(testStock)
     
     
-    useEffect(() => {
-        let url = `/stock/findById/${props.stock_id}`;
-        fetch(url,
-            {
-                method: "GET",
-                credentials: "include",
-            }).then(response => response.json())
-            .then(req_stock => setStock(req_stock)).then(last => console.log(stock)
-                );
-            },[]);
+    // useEffect(() => {
+    //     let url = `/stock/findById/${props.stock_id}`;
+    //     fetch(url,
+    //         {
+    //             method: "GET",
+    //             credentials: "include",
+    //         }).then(response => response.json())
+    //         .then(req_stock => setStock(req_stock)).then(last => console.log(stock)
+    //             );
+    //         },[]);
 
 
 
@@ -61,20 +61,20 @@ function CardC(props:any)
         <div>
         <Cards>
         <Contain>
-            <Image src={stock.img} alt='image1'/>
+            <Image src={props.stock.img} alt='image1'/>
             <p>
-                Description:{stock.description}
+                Description:{props.stock.description}
             </p>
         </Contain>
         <Contain>
             <p>
-                Total Invested: {stock.totalInvested}
+                Total Invested: {props.stock.totalInvested}
             </p>
             <p>
-                Market Cap: {stock.marketCap}
+                Market Cap: {props.stock.marketCap}
             </p>
         </Contain>
-                <NavBtnLink to='/profile'>Price: {stock.price}</NavBtnLink>
+                <NavBtnLink to='/profile'>Price: {props.stock.price}</NavBtnLink>
     </Cards>
         </div>
         //     <Card style={{ width: '18rem'}}bg={'Secondary'}>
