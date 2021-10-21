@@ -9,6 +9,8 @@ import PortfolioPage from './pages/PortfolioPage';
 import RegistrationPage from './pages/RegistrationPage';
 import CreditcardPage from './pages/CreditcardPage';
 import StockPage from './pages/StockPage';
+import AdminPage from './pages/AdminPage';
+import AddFromPage from './pages/AddFormPage';
 
 export interface IState {
   users: {
@@ -31,12 +33,18 @@ function App() {
   const [users, setUsers] = useState<IState["users"]>([])
 
   return (
-    <div className="App">
+    <div>
       
       <BrowserRouter>
         <Switch>
           <Route exact path="/login">
             <LoginPage />
+          </Route>
+          <Route exact path="/admin">
+            <AdminPage />
+          </Route>
+          <Route exact path="/admin/add">
+            <AddFromPage />
           </Route>
           <Route exact path="/mjinvestments/home">
             <HomePage />

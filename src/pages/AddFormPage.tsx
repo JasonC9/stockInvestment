@@ -1,13 +1,11 @@
-import RegisterUser from '../components/RegisterUser';
 import { Grid } from "@material-ui/core";
+import AddForm from "../components/AddForm";
 
-
-
-export default function RegistrationPage(){
+export default function AddFromPage(){
 
     return (
         <Grid container direction="column" alignItems="center" justify="center">
-            <RegisterUser />       
+           <AddForm /> 
         </Grid>
     )
 }
