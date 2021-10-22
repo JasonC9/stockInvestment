@@ -27,7 +27,7 @@ function AdminNavbar() {
 
                     <Nav className="me-auto" style={{ marginLeft: 20 }}>
                         <Nav.Link>Admin</Nav.Link>
-                        <Nav.Link href="/admin/add" style={{ marginLeft: 50 }}>Add New</Nav.Link>
+                        <Nav.Link href="/stock/add" style={{ marginLeft: 50 }}>Add New Stock</Nav.Link>
                         <Nav.Link href="/mjinvestments/portfolio" style={{ marginLeft: 80 }}>Portfolio</Nav.Link>
                         {/* <Nav.Link href="/mjinvestments/profile" style={{ marginLeft: 100 }}>Pricing</Nav.Link> */}
                     </Nav>
