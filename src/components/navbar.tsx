@@ -27,6 +27,10 @@ function Navb() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
 
+                    <Nav className="stock" style={{ marginLeft: 10}}>
+                        <Nav.Link href="/stock/add" style={{ marginLeft: 20}}>Add Stock</Nav.Link>
+                    </Nav>
+
                     <Nav className="me-auto" style={{ marginLeft: 20 }}>
                         <Nav.Link href="/mjinvestments/portfolio" style={{ marginLeft: 40 }}>Portfolio</Nav.Link>
                         {/* <Nav.Link href="/mjinvestments/profile" style={{ marginLeft: 100 }}>Pricing</Nav.Link> */}
