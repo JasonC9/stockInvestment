@@ -11,6 +11,7 @@ import CreditcardPage from './pages/CreditcardPage';
 import StockPage from './pages/StockPage';
 import AdminPage from './pages/AdminPage';
 import AddFormPage from './pages/AddFormPage';
+import AddStockPage from './pages/AddStockPage';
 
 export interface IState {
   users: {
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <RegistrationPage />
+          </Route>
+          <Route exact path="/stock/add">
+            <AddStockPage />
           </Route>
           <Route exact path="/creditCard">
             <CreditcardPage />
