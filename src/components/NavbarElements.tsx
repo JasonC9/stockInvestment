@@ -1,15 +1,15 @@
-import { NavLink as Link} from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {FaBars} from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import logo from '../mjlogo.jpg'
 
-export const Nav=styled.nav`
-    background: #000;
+export const Nav = styled.nav`
+    background: #D3D3D3;
     height: 80px;
     display: flex;justify-content: space-between;
     z-index: 10;
     `
-    export const NavLink=styled(Link)`
+export const NavLink = styled(Link)`
     color: #fff;
     display: flex;
     align-items:center;
@@ -20,31 +20,31 @@ export const Nav=styled.nav`
     color: #15cdfc;
     font-size: 24px;
     `
-  export const HomeLogo=styled.img.attrs({
-    src: `${logo}`
-  })`
+export const HomeLogo = styled.img.attrs({
+  src: `${logo}`
+})`
     width:400px;
     height: 100px;
     border-radius: 4px;
     border-color: coral;
     `
-    export const Bars = styled(FaBars)`
+export const Bars = styled(FaBars)`
         display:none;
         color:#
         fff;
     `
-    export const NavMenu = styled.div`
+export const NavMenu = styled.div`
     display: flex;
     align-items: center;
     padding-right: 60px;
     `
-    export const NavBtn = styled.nav`
+export const NavBtn = styled.nav`
     display:flex;
     align-items: center;
     margin-right: 24px;
     padding-left: 20px;
     `
-    export const NavBtnLink=styled(Link)`
+export const NavBtnLink = styled(Link)`
     border-radius: 4px;
     background: #256ce1;
     padding: 10px 22px;
@@ -55,13 +55,13 @@ export const Nav=styled.nav`
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     `
-    export const Testing = styled.h1`
+export const Testing = styled.h1`
     font-weight: normal;
     font-style: italic;
     color: #15cdfc;
     font-size: 24px;
   `
-    export const Button=styled.button`
+export const Button = styled.button`
     color: #fff;
     background-color: #256ce1;
     display:flex;

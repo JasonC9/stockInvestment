@@ -19,7 +19,7 @@ function AdminNavbar() {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -28,7 +28,7 @@ function AdminNavbar() {
                     <Nav className="me-auto" style={{ marginLeft: 20 }}>
                         <Nav.Link>Admin</Nav.Link>
                         <Nav.Link href="/admin/add" style={{ marginLeft: 50 }}>Add New</Nav.Link>
-                        <Nav.Link href="/mjinvestments/portfolio" style={{ marginLeft: 80 }}>Portfolio</Nav.Link>
+                        {/* <Nav.Link href="/mjinvestments/portfolio" style={{ marginLeft: 80 }}>Portfolio</Nav.Link> */}
                         {/* <Nav.Link href="/mjinvestments/profile" style={{ marginLeft: 100 }}>Pricing</Nav.Link> */}
                     </Nav>
                     <Nav>

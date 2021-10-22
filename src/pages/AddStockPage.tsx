@@ -2,11 +2,14 @@ import { Grid } from "@material-ui/core";
 import AddForm from "../components/AddForm";
 import AddStock from "../components/AddStock";
 
-export default function AddStockPage(){
+export default function AddStockPage() {
 
     return (
-        
-           <AddStock /> 
-        
+
+        <div style={{ backgroundColor: "#ADD8E6" }}>
+            <AddStock />
+        </div>
+
+
     )
 }
