@@ -12,6 +12,7 @@ export default function StockInfoBox(props: any) {
                     <h1> {props.stock.stockName} </h1>
                     <br />
                     <p> Minimum investment: ${props.stock.price} </p>
+                    <NavBtnLink to={`/mjinvestments/stock`}>Buy</NavBtnLink>
                 </Card.Body>
             </Card>
 
