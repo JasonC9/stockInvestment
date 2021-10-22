@@ -39,19 +39,8 @@ export default function PortfolioPage() {
     // console.log(stocks);
 
 
-    useEffect(() => {
-        let url = `/stock/findAll`;
-        fetch(url,
-            {
-                method: "GET",
-                credentials: "include",
-            }).then(response => response.json())
-            .then(cards =>{setStocks(cards)
-            });
-            },[]);
-    
     return (
-        <div>
+        <div style={{ backgroundColor: "#ADD8E6" }}>
             <Navb />
 
             <h1> Welcome to your portfolio! </h1>
