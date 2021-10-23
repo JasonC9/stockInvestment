@@ -5,8 +5,6 @@ import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
 import { Grid } from "@material-ui/core";
 import { InfoCard } from '../components/CardElements';
-import { Container } from 'react-bootstrap';
-
 
 
 
@@ -70,32 +68,28 @@ export default function HomePage(props: any) {
 
     console.log(stocks)
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
-            <div >
+        <div>
+            <div style={{
+                backgroundImage: `url("https://cdn.wallpapersafari.com/91/34/kTOp1P.jpg")`,
+                backgroundRepeat: `no-repeat`,
+                backgroundSize: `1920px 720px`
+            }}>
 
 
                 <Navbar />
+                <p>
+                    This is the home page.
+                </p>
+                <Link to="/mjinvestments/portfolio"> to portfolio page</Link>
+                <br />
+                <Link to="/mjinvestments/stocktest"> to stock test page</Link>
 
-                <Container fluid style={{ paddingTop: "20px" }}>
-                    <InfoCard>
-                        <h2>What is MJ Investments?</h2>
-                        <h5 style={{ paddingTop: "10px" }}>
-                            We offer a solution to empower everyday people to become angel investors to front of the market innovators and
-                            their start up companies. You can now easily (at the click of a button!) kickstart your portfolio and
-                            begin forming the future of technology and commerce.
-                        </h5>
-                        <h5 style={{ paddingTop: "5px" }}>
-                            Take a look below at the myriad of choices available to you to start investing in top of the line entrepreneurs.
-                            Pick a couple of companies that pique your interest and click to educate yourself about the company. Finally,
-                            you can decide how many shares you would like to purchase and suddenly you are a proud shareholder of a
-                            Facebook to be!
-                        </h5>
-                    </InfoCard>
-                </Container>
-
+                <InfoCard>What is MJ Investments?
+                    <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
+                </InfoCard>
                 <br />
 
-                <Grid container spacing={1}>
+                <Grid container spacing={0}>
 
                     {/* <div className="stockI">
             {
@@ -135,6 +129,6 @@ export default function HomePage(props: any) {
                 }
                 </div> */}
             </div>
-        </div >
+        </div>
     )
 }
