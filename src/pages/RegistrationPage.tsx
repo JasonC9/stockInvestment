@@ -3,11 +3,14 @@ import { Grid } from "@material-ui/core";
 
 
 
-export default function RegistrationPage(){
+export default function RegistrationPage() {
 
     return (
-        <Grid container direction="column" alignItems="center" justify="center">
-            <RegisterUser />       
-        </Grid>
+        <div style={{ backgroundColor: "#ADD8E6" }}>
+            <Grid container direction="column" alignItems="center" justify="center">
+                <RegisterUser />
+            </Grid>
+        </div>
+
     )
 }

@@ -12,6 +12,7 @@ import StockPage from './pages/StockPage';
 import AdminPage from './pages/AdminPage';
 import AddFormPage from './pages/AddFormPage';
 import AddStockPage from './pages/AddStockPage';
+import ProfilePage from './pages/ProfilePage';
 
 export interface IState {
   users: {
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route exact path="/mjinvestments/portfolio">
             <PortfolioPage />
+          </Route>
+          <Route exact path="/mjinvestments/profile">
+            <ProfilePage />
           </Route>
           <Route exact path="/register">
             <RegistrationPage />

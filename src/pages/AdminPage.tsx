@@ -67,20 +67,9 @@ export default function AdminPage(props: any) {
     console.log(stocks)
     return (
         <div>
-            <div style={{
-                backgroundImage: `url("https://cdn.wallpapersafari.com/91/34/kTOp1P.jpg")`,
-                backgroundRepeat: `no-repeat`,
-                backgroundSize: `1920px 720px`
-            }}>
-
+            <div style={{ backgroundColor: "#ADD8E6" }}>
 
                 <AdminNavbar />
-                <p>
-                    This is the home page.
-                </p>
-                <Link to="/mjinvestments/portfolio"> to portfolio page</Link>
-                <br />
-                <Link to="/mjinvestments/stocktest"> to stock test page</Link>
 
                 <InfoCard>What is MJ Investments?
                     <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
