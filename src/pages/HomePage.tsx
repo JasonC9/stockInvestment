@@ -88,7 +88,8 @@ export default function HomePage(props: any) {
                     <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
                 </InfoCard>
                 <br />
-                <Grid container spacing={4}>
+
+                <Grid container spacing={1}>
 
                     {/* <div className="stockI">
             {
@@ -96,8 +97,6 @@ export default function HomePage(props: any) {
                 <Card stock_id={arrStock.stock_id}/>
             ))}
             </div> */}
-
-
 
                     {
                         stocks.map((stock) => {

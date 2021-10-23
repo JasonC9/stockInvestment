@@ -21,6 +21,7 @@ export const Cards =styled.nav`
   export const Image=styled.img`
     object-fit: cover;
     width 200px;
+    height 120px;
     border-radius: 5px 5px 0 0;
 
   `
