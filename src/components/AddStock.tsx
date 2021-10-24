@@ -44,6 +44,11 @@ function AddStock() {
 
     }
 
+    const cancel = (e: any) => {
+        e.preventDefault();
+        history.push('/admin');
+    }
+
     return (
         <div>
            
@@ -92,7 +97,8 @@ function AddStock() {
                 </div>
 
                 <button className="btn_color" type="submit" onClick={add} >Add</button><br />
-
+                <button className="cancel_color" type="submit" onClick={cancel} >Cancel</button><br />
+                
             </form>
             </Grid>
         </div>

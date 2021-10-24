@@ -14,6 +14,7 @@ import AddFormPage from './pages/AddFormPage';
 import AddStockPage from './pages/AddStockPage';
 import ProfilePage from './pages/ProfilePage';
 import CustomerListPage from './pages/CustomerListPage';
+import AdminStockPage from './pages/AdminStockPage';
 
 export interface IState {
   users: {
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route exact path="/admin">
             <AdminPage />
+          </Route>
+          <Route exact path="/admin/stock/:id">
+            <AdminStockPage />
           </Route>
           <Route exact path="/admin/viewAll">
             <CustomerListPage />

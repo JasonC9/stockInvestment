@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Card from '../components/Card';
-import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
 import { Grid } from "@material-ui/core";
-import { InfoCard } from '../components/CardElements';
 import AdminNavbar from '../components/AdminNavbar';
 
 import '../App.css';
+import AdminCard from '../components/AdminCard';
 
 
 export default function AdminPage(props: any) {
@@ -15,7 +13,7 @@ export default function AdminPage(props: any) {
     function renderTable(cards: any) {
         return (
             Object.entries(cards).forEach((fieldStock) =>
-                <Card stock={fieldStock} />)
+                <AdminCard stock={fieldStock} />)
         )
     }
 
@@ -94,7 +92,7 @@ export default function AdminPage(props: any) {
                         stocks.map((stock) => {
                             return (
                                 <Grid key={stock.stockName} item xs={6} sm={6} md={4}>
-                                    <Card stock={stock} />
+                                    <AdminCard stock={stock} />
                                     <br />
                                 </Grid>
                             )
