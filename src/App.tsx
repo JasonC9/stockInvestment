@@ -35,7 +35,7 @@ function App() {
   const [users, setUsers] = useState<IState["users"]>([])
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#ADD8E6" }}>
       <BrowserRouter>
         <Switch>
           <Route exact path="/login">

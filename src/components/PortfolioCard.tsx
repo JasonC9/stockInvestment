@@ -2,31 +2,24 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 //import {Card,ListGroupItem,ListGroup,Button} from 'react-bootstrap';
 import "./Card.css";
-import {Cards, Contain,Image} from './CardElements';
-import {NavBtn,NavBtnLink} from './NavbarElements';
+import { Cards, Contain, Image } from './CardElements';
+import { NavBtn, NavBtnLink } from './NavbarElements';
 
-function PortfolioC(props:any)
-{
-    return(
+function PortfolioC(props: any) {
+    return (
         <div>
             <Cards>
                 <Contain>
-                    <Image src={props.stock.img} alt='image2'/>
+                    <Image src={props.stock.img} alt='image2' />
                     <p>
-                        Description:{props.stock.description} 
+                        Market Cap: ${props.stock.marketCap}
                     </p>
                     <p>
-                    Total Invested:
-                    </p>
-                    <p>
-                        Market Cap:
+                        Total Invested: ${props.stock.totalInvested}
                     </p>
                 </Contain>
                 <Contain>
-                    <p>Owned: </p>
-                    <p>
-                    Value:
-                    </p>
+                    <p> My investment:  ${props.amount_held}</p>
                 </Contain>
             </Cards>
         </div>
