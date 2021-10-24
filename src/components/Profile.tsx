@@ -2,7 +2,10 @@ import React from 'react';
 import {Container} from './ProfileElements';
 import "./Profile.css";
 
-function Profile()
+
+
+
+function Profile(props:any)
 {
 return(
     <div>

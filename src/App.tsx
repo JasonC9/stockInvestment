@@ -36,8 +36,12 @@ function App() {
   const [users, setUsers] = useState<IState["users"]>([])
 
   return (
+<<<<<<< HEAD
     
     <div>
+=======
+    <div style={{ backgroundColor: "#ADD8E6" }}>
+>>>>>>> af9d856f8dc840ad6fb4b33b7e61709158344951
       <BrowserRouter>
         <Switch>
           <Route exact path="/login">

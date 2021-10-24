@@ -5,6 +5,7 @@ import Card from '../components/Card';
 import Navb from '../components/navbar';
 import Profile from '../components/Profile';
 import { isAuthenticated } from '../utilities/authenticationUtils';
+import PortfolioCard from '../components/PortfolioCard';
 
 export default function PortfolioPage() {
 
@@ -19,7 +20,7 @@ export default function PortfolioPage() {
     }
 
     const history = useHistory();
-    const [stocks, setStocks] = useState([testStock])
+    const [holdings, setHoldings] = useState([{ amount_held: "0", stock: testStock }])
 
     useEffect(() => {
         (async () => {
@@ -31,16 +32,16 @@ export default function PortfolioPage() {
     }, []);
 
     useEffect(() => {
-        fetch("/holdings/getStocks", { method: "GET", credentials: 'include', })
+        fetch("/holdings/getHoldings", { method: "GET", credentials: 'include', })
             .then(response => response.json())
-            .then(stocks => setStocks(stocks))
+            .then(holdings => setHoldings(holdings))
     }, []);
 
     // console.log(stocks);
 
 
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
+        <div >
             <Navb />
 
             <h1> Welcome to your portfolio! </h1>
@@ -48,10 +49,10 @@ export default function PortfolioPage() {
             <Grid container spacing={4}>
 
                 {
-                    stocks.map((stock) => {
+                    holdings.map((holding) => {
                         return (
-                            <Grid key={stock.stockName} item xs={6} sm={6} md={4}>
-                                <Card stock={stock} />
+                            <Grid key={holding.stock.stockName} item xs={6} sm={6} md={4}>
+                                <PortfolioCard stock={holding.stock} amount_held={holding.amount_held} />
                             </Grid>
 
                         )

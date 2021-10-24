@@ -9,7 +9,6 @@ import { Container } from 'react-bootstrap';
 
 
 
-
 export default function HomePage(props: any) {
 
 
@@ -70,12 +69,11 @@ export default function HomePage(props: any) {
 
     console.log(stocks)
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
-            <div >
+        <div>
+            <div>
 
 
                 <Navbar />
-
                 <Container fluid style={{ paddingTop: "20px" }}>
                     <InfoCard>
                         <h2>What is MJ Investments?</h2>
@@ -93,8 +91,7 @@ export default function HomePage(props: any) {
                     </InfoCard>
                 </Container>
 
-                <br />
-                <Grid container spacing={4}>
+                <Grid container spacing={0}>
 
                     {/* <div className="stockI">
             {
@@ -102,8 +99,6 @@ export default function HomePage(props: any) {
                 <Card stock_id={arrStock.stock_id}/>
             ))}
             </div> */}
-
-
 
                     {
                         stocks.map((stock) => {
@@ -136,6 +131,6 @@ export default function HomePage(props: any) {
                 }
                 </div> */}
             </div>
-        </div >
+        </div>
     )
 }

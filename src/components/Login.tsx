@@ -12,7 +12,6 @@ function Login() {
     }
 
     const [formData, updateFormData] = useState(initialFormData);
-
     const sendLogin = async (user:String, pass:String) => {
         let data = {
             username: user,

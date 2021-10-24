@@ -75,8 +75,16 @@ export default function AdminPage(props: any) {
 
             <AdminNavbar /><br />
 
+<<<<<<< HEAD
                 <h2 className="text-center">Stock List</h2><br />
                 <Grid container spacing={4}>
+=======
+                <InfoCard>What is MJ Investments?
+                    <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
+                </InfoCard>
+                <br />
+                <Grid container spacing={0}>
+>>>>>>> af9d856f8dc840ad6fb4b33b7e61709158344951
 
                     {/* <div className="stockI">
             {

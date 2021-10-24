@@ -7,7 +7,7 @@ export const Cards = styled.nav`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10px;
-    width 17rem;
+    width 270px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -21,6 +21,7 @@ export const Contain = styled.nav`
 export const Image = styled.img`
     object-fit: cover;
     width 200px;
+    height 120px;
     border-radius: 5px 5px 0 0;
     height 120px;
 
