@@ -1,11 +1,8 @@
 p
 {
-    
-    font-family:fantasy;
+    padding-left:60px;
+
 }
 Container{
     justify-content: center;
-}
-h4{
-    padding-left:30px;
 }
