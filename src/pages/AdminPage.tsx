@@ -7,6 +7,8 @@ import { Grid } from "@material-ui/core";
 import { InfoCard } from '../components/CardElements';
 import AdminNavbar from '../components/AdminNavbar';
 
+import '../App.css';
+
 
 export default function AdminPage(props: any) {
 
@@ -66,15 +68,14 @@ export default function AdminPage(props: any) {
 
     console.log(stocks)
     return (
+        
         <div>
-            <div style={{ backgroundColor: "#ADD8E6" }}>
+            
+            <div >
 
-                <AdminNavbar />
+            <AdminNavbar /><br />
 
-                <InfoCard>What is MJ Investments?
-                    <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
-                </InfoCard>
-                <br />
+                <h2 className="text-center">Stock List</h2><br />
                 <Grid container spacing={4}>
 
                     {/* <div className="stockI">
@@ -118,5 +119,6 @@ export default function AdminPage(props: any) {
                 </div> */}
             </div>
         </div>
+       
     )
 }

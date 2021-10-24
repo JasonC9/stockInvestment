@@ -5,6 +5,7 @@ import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
 import { Grid } from "@material-ui/core";
 import { InfoCard } from '../components/CardElements';
+import AdminNavbar from './AdminNavbar';
 
 
 
@@ -38,24 +39,19 @@ function AddStock() {
 
         let response = fetch("/stock", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(addStock)})
         .then(() => {
-            history.push('/mjinvestments/home');
+            history.push('/admin');
         });  
 
     }
 
     return (
         <div>
-            <div style={{
-                backgroundImage: `url("https://cdn.wallpapersafari.com/91/34/kTOp1P.jpg")`,
-                backgroundRepeat: `no-repeat`,
-                backgroundSize: `1920px 720px`
-            }}>
+           
 
-
-                <Navbar />
+                <AdminNavbar />
                
                
-            </div>
+            
             <Grid container direction="column" alignItems="center" justify="center">
             <form className="card">
                 <h2 className="form_register">Add Stock</h2>

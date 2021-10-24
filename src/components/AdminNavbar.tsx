@@ -19,26 +19,29 @@ function AdminNavbar() {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
 
+                <Navbar.Brand href="/mjinvestments/home">
+                    <img src={logo} style={{ height: 100, width: 400 }} />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className="me-auto" style={{ marginLeft: 20 }}>
-                        <Nav.Link>Admin</Nav.Link>
-                        <Nav.Link href="/stock/add" style={{ marginLeft: 50 }}>Add New Stock</Nav.Link>
+                        <Nav.Link href="/stock/add">Add New Stock</Nav.Link>
+                        <Nav.Link href="/admin" style={{ marginLeft: 50 }}>View All Stocks</Nav.Link>
+                        <Nav.Link href="/admin/viewAll" style={{ marginLeft: 50 }}>View All Customers</Nav.Link>
                         {/* <Nav.Link href="/mjinvestments/portfolio" style={{ marginLeft: 80 }}>Portfolio</Nav.Link> */}
                         {/* <Nav.Link href="/mjinvestments/profile" style={{ marginLeft: 100 }}>Pricing</Nav.Link> */}
                     </Nav>
-                    <Nav>
-                        <NavDropdown title="Profile" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/mjinvestments/profile">Account Details</NavDropdown.Item>
-                            {/* <NavDropdown.Item href="/mjinvestments/portfolio">Account</NavDropdown.Item> */}
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={handleLogout}>Log Out</NavDropdown.Item>
-                        </NavDropdown>
+
+                    <Nav className="me-auto" style={{ marginLeft: 20 }}>
+                    <button type="button" className="btn btn-primary" onClick={handleLogout}>Log Out</button>
+                   
                     </Nav>
+
+                   
                 </Navbar.Collapse>
             </Container>
         </Navbar>
