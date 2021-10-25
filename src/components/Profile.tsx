@@ -9,20 +9,22 @@ import { useHistory } from "react-router";
 function Profile(props:any)
 {
     const history = useHistory();
-    const profileData = {
-        username: "",
-        firstname: "",
-        streetAddress: "",
 
-
+    const userData = {
+        id: 1,
+        first_name: "",
+        username: ""
     }
-    const sendUser = async (user:String,fname:String,street:String,c) => {
-        let data = {
-            username: user,
-            firstname: fname,
-            streetAddress: street,
-            city:
-        }
+    
+    const profileData = {
+        streetAddress: "",
+        city: "",
+        state: "",
+        zipcode:6,
+        user: userData
+    }
+
+
 
     }
     useEffect(() => {
