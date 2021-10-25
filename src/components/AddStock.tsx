@@ -62,38 +62,38 @@ function AddStock() {
                 <h2 className="form_register">Add Stock</h2>
                 <div className="form_input-group">
                     <label>Select image:</label>
-                    <input type="text" id="img" name="img" required value={input.img}
-                    onChange={handleChange} />
+                    <input type="text" id="img" name="img" value={input.img}
+                    onChange={handleChange}  required />
                 </div>
 
                 <div className="form_input-group">
                     <label htmlFor="stock_name">Stock Name</label>
-                    <input className="form_input" type="text" name="stockName" placeholder="Enter stock name" required value={input.stockName} 
-                    onChange={handleChange}/>
+                    <input className="form_input" type="text" name="stockName" placeholder="Enter stock name" value={input.stockName} 
+                    onChange={handleChange} required />
                 </div>
 
                 <div className="form_input-group">
                     <label htmlFor="description">Description</label>
-                    <input className="form_input" type="textbox" name="description" placeholder="Enter description" required value={input.description} 
-                    onChange={handleChange}/>
+                    <input className="form_input" type="textbox" name="description" placeholder="Enter description"  value={input.description} 
+                    onChange={handleChange} required/>
                 </div>
 
                 <div className="form_input-group">
                     <label htmlFor="total">Total Invested</label>
-                    <input className="form_input" type="text" name="totalInvested" placeholder="Enter total invested" required value={input.totalInvested} 
-                    onChange={handleChange}/>
+                    <input className="form_input" type="text" name="totalInvested" placeholder="Enter total invested"  value={input.totalInvested} 
+                    onChange={handleChange} required/>
                 </div>
 
                 <div className="form_input-group">
                     <label htmlFor="market_cap">Market Cap</label>
-                    <input className="form_input" type="text" name="marketCap" placeholder="Enter Market Cap" required value={input.marketCap}
-                    onChange={handleChange} />
+                    <input className="form_input" type="text" name="marketCap" placeholder="Enter Market Cap"  value={input.marketCap}
+                    onChange={handleChange} required />
                 </div>
 
                 <div className="form_input-group">
                     <label htmlFor="total">Price</label>
-                    <input className="form_input" type="text" name="price" placeholder="Enter Price" required value={input.price}
-                    onChange={handleChange}/>
+                    <input className="form_input" type="text" name="price" placeholder="Enter Price"  value={input.price}
+                    onChange={handleChange} required />
                 </div>
 
                 <button className="btn_color" type="submit" onClick={add} >Add</button><br />
