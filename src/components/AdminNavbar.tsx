@@ -21,8 +21,7 @@ function AdminNavbar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-
-                <Navbar.Brand href="/mjinvestments/home">
+                <Navbar.Brand href="/admin">
                     <img src={logo} style={{ height: 100, width: 400 }} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

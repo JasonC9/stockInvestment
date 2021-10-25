@@ -2,8 +2,10 @@
 {
     padding-left:50px;
     font-size:25px;
-    font-weight: bold;
 }
 Container{
     justify-content: center;
+}
+p{
+    font-family: fantasy;
 }

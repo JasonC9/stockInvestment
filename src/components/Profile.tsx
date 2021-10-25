@@ -1,23 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {Container} from './ProfileElements';
 import "./Profile.css";
+import { isAuthenticated } from "../utilities/authenticationUtils";
+import { useHistory } from "react-router";
 
 
 
 function Profile(props:any)
 {
-    const initialFormData = {
-        username: ""
+    const history = useHistory();
+    const profileData = {
+        username: "",
+        firstname: "",
+        streetAddress: "",
+
+
     }
-    const [formData, updateFormData] = useState(initialFormData);
-    const sendUser = async (user:String) => {
+    const sendUser = async (user:String,fname:String,street:String,c) => {
         let data = {
-            username: user
+            username: user,
+            firstname: fname,
+            streetAddress: street,
+            city:
         }
-        let response = fetch("/auth/getUser", {method:"GET", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(data)});
-        let result = (await response).text();
-        console.log(data);
+
     }
+    useEffect(() => {
+        (async () => {
+            if (!await isAuthenticated()) {
+                // console.log("checked auth")
+                history.push("/login");
+            }
+        })();
+    }, []);
+    const [profile, setProfile] = useState([profileData]);
+
+    useEffect(()=>{
+        let url='creditCard/findAll';
+        fetch(url,
+            {
+                method:"GET",
+                credentials:"include",
+            }).then(response=>response.json())
+            .then(pf=>{
+                setProfile(pf)
+            });
+    },[]);
+
+
 return(
     <div>
         <Container>
