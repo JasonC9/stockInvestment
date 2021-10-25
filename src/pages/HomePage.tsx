@@ -106,6 +106,8 @@ export default function HomePage(props: any) {
                             return (
                                 <Grid key={stock.stockName} item xs={6} sm={6} md={4}>
                                     <Card stock={stock} />
+                                    <br />
+                                    <br />
                                 </Grid>
                             )
                         })
