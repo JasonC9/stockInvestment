@@ -56,7 +56,7 @@ export default function PortfolioPage() {
 
             <h1> Welcome to your portfolio! </h1>
 
-            <Grid container spacing={4}>
+            <Grid container spacing={0}>
 
                 {
                     stocks.map((stock) => {

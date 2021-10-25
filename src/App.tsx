@@ -13,6 +13,8 @@ import AdminPage from './pages/AdminPage';
 import AddFormPage from './pages/AddFormPage';
 import AddStockPage from './pages/AddStockPage';
 import ProfilePage from './pages/ProfilePage';
+import CustomerListPage from './pages/CustomerListPage';
+import AdminStockPage from './pages/AdminStockPage';
 
 export interface IState {
   users: {
@@ -35,6 +37,7 @@ function App() {
   const [users, setUsers] = useState<IState["users"]>([])
 
   return (
+    
     <div>
       <BrowserRouter>
         <Switch>
@@ -44,8 +47,11 @@ function App() {
           <Route exact path="/admin">
             <AdminPage />
           </Route>
-          <Route exact path="/admin/add">
-            <AddFormPage />
+          <Route exact path="/admin/stock/:id">
+            <AdminStockPage />
+          </Route>
+          <Route exact path="/admin/viewAll">
+            <CustomerListPage />
           </Route>
           <Route exact path="/mjinvestments/home">
             <HomePage />
@@ -74,6 +80,7 @@ function App() {
         </Switch>
       </BrowserRouter>
     </div>
+  
   );
 }
 

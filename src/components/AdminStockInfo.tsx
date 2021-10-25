@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import { NavBtnLink } from '../components/NavbarElements';
+import AdminCard from './AdminCard';
 
 
-export default function StockInfoBox(props: any) {
+export default function AdminStockInfo(props: any) {
 
     const history = useHistory();
 
@@ -42,12 +43,6 @@ export default function StockInfoBox(props: any) {
                     <p> Total Invested: ${props.stock.totalInvested}</p>
                     <p> </p>
                     <p> Price per share: ${props.stock.price} </p>
-
-                    <p> How much would you would you like to invest? </p>
-                    <form style={{ paddingTop: "10px", paddingBottom: "10px" }}>
-                        <input onChange={handleChange} type="number" min={props.stock.price} name="shares" placeholder="Enter dollar amount" />
-                    </form>
-                    <Button onClick={handleSubmit}> Purchase </Button>
                 </Card.Body>
             </Card>
 

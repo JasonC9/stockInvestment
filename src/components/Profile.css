@@ -1,7 +1,8 @@
-p
+.user-text
 {
-    padding-left:60px;
-
+    padding-left:50px;
+    font-size:25px;
+    font-weight: bold;
 }
 Container{
     justify-content: center;

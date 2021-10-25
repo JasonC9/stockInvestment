@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import {Container} from './ProfileElements';
 import "./Profile.css";
 
@@ -6,6 +6,18 @@ import "./Profile.css";
 
 function Profile(props:any)
 {
+    const initialFormData = {
+        username: ""
+    }
+    const [formData, updateFormData] = useState(initialFormData);
+    const sendUser = async (user:String) => {
+        let data = {
+            username: user
+        }
+        let response = fetch("/auth/getUser", {method:"GET", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(data)});
+        let result = (await response).text();
+        console.log(data);
+    }
 return(
     <div>
         <Container>
@@ -16,7 +28,8 @@ return(
             <div>
             <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
             src='https://st2.depositphotos.com/5682790/10456/v/600/depositphotos_104564156-stock-illustration-male-user-icon.jpg'/>
-            <p>Test</p>
+            <br/>
+            <p className="user-text">User</p>
             </div>
             <div>
                 <h4>Name:</h4>

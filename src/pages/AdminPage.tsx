@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Card from '../components/Card';
-import Navbar from '../components/navbar';
 import { isAuthenticated } from '../utilities/authenticationUtils';
 import { Grid } from "@material-ui/core";
-import { InfoCard } from '../components/CardElements';
 import AdminNavbar from '../components/AdminNavbar';
+
+import '../App.css';
+import AdminCard from '../components/AdminCard';
 
 
 export default function AdminPage(props: any) {
@@ -13,7 +13,7 @@ export default function AdminPage(props: any) {
     function renderTable(cards: any) {
         return (
             Object.entries(cards).forEach((fieldStock) =>
-                <Card stock={fieldStock} />)
+                <AdminCard stock={fieldStock} />)
         )
     }
 
@@ -66,16 +66,18 @@ export default function AdminPage(props: any) {
 
     console.log(stocks)
     return (
+        
         <div>
-            <div style={{ backgroundColor: "#ADD8E6" }}>
+            
+            <div >
 
-                <AdminNavbar />
+            <AdminNavbar /><br />
 
-                <InfoCard>What is MJ Investments?
+               {/*  <InfoCard>What is MJ Investments?
                     <p>We are a third party marketing website that offers services to buy and sell stocks for you and your company</p>
-                </InfoCard>
-                <br />
-                <Grid container spacing={0}>
+                </InfoCard> 
+                <br /> */}
+                <Grid container spacing={0}> 
 
                     {/* <div className="stockI">
             {
@@ -90,7 +92,8 @@ export default function AdminPage(props: any) {
                         stocks.map((stock) => {
                             return (
                                 <Grid key={stock.stockName} item xs={6} sm={6} md={4}>
-                                    <Card stock={stock} />
+                                    <AdminCard stock={stock} />
+                                    <br />
                                 </Grid>
                             )
                         })
@@ -118,5 +121,6 @@ export default function AdminPage(props: any) {
                 </div> */}
             </div>
         </div>
+       
     )
 }

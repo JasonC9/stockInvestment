@@ -80,6 +80,23 @@
 
 }
 
+.cancel_color {
+    width: 100%;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    background:  red;
+    cursor: pointer;
+    outline: none;
+}
+
+.cancel_color:hover {
+    background: darkred;
+}
+
 .btn_color:hover {
     background: darkblue;
 }
@@ -103,3 +120,4 @@
     text-decoration: underline;
     color: Green;
 }
+
