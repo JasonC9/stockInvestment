@@ -18,9 +18,14 @@ export default function PortfolioPage() {
         marketCap: 2102390,
         totalInvested: 1230012
     }
+    const initHolding = {
+        amount_held: "",
+        stock:testStock,
+
+    }
 
     const history = useHistory();
-    const [holdings, setHoldings] = useState([{ amount_held: "0", stock: testStock }])
+    const [holdings, setHoldings] = useState([initHolding])
 
     useEffect(() => {
         (async () => {
@@ -39,22 +44,21 @@ export default function PortfolioPage() {
 
     // console.log(stocks);
 
-
+    
     return (
-        <div >
+        <div>
             <Navb />
 
             <h1> Welcome to your portfolio! </h1>
 
-            <Grid container spacing={4}>
+            <Grid container spacing={0}>
 
                 {
                     holdings.map((holding) => {
                         return (
                             <Grid key={holding.stock.stockName} item xs={6} sm={6} md={4}>
-                                <PortfolioCard stock={holding.stock} amount_held={holding.amount_held} />
+                                <PortfolioCard stock={holding.stock} amount_held={holding.amount_held}/>
                             </Grid>
-
                         )
                     })
                 }

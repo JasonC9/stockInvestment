@@ -6,7 +6,7 @@ import Login from '../components/Login';
 export default function LoginPage() {
 
     return (
-        <body style={{ backgroundColor: "#ADD8E6" }}>
+        <body >
         <div >
             <Grid container direction="column" alignItems="center" justify="center">
                 <Login />

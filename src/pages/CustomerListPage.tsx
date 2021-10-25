@@ -25,7 +25,7 @@ function CustomerListPage(pros: any){
         city: "",
         state: "",
         zipcode: 6,
-        userId: 7,
+        user_id: 7,
         user: userData
 
     }

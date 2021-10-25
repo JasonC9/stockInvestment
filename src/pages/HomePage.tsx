@@ -89,6 +89,7 @@ export default function HomePage(props: any) {
                             Facebook to be!
                         </h5>
                     </InfoCard>
+                    <br/>
                 </Container>
 
                 <Grid container spacing={0}>

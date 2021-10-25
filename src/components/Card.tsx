@@ -41,8 +41,6 @@ function CardC(props: any) {
 
 
     // const [stock, setStock] = useState(testStock)
-
-
     // useEffect(() => {
     //     let url = `/stock/findById/${props.stock_id}`;
     //     fetch(url,
