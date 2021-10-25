@@ -9,6 +9,12 @@ function CustomerListPage(pros: any){
 
     const history = useHistory();
 
+    
+    const userData = {
+        id: 1,
+        first_name: "",
+        username: ""
+    }
     const creditcardData = {
         id: 1,
         creditCardNumber: 2,
@@ -19,16 +25,13 @@ function CustomerListPage(pros: any){
         city: "",
         state: "",
         zipcode: 6,
-        user_id: 7
+        userId: 7,
+        user: userData
 
     }
 
-    const userData = {
-        id: 1,
-        first_name: ""
-    }
 
-    const [users, setUsers] = useState([userData])
+    const [users, setUsers] = useState([{creditcardData,userData}])
 
     useEffect(() => {
         (async () => {
@@ -39,7 +42,7 @@ function CustomerListPage(pros: any){
         })();
     }, []);
 
-    const [customers, setCustomers] = useState([creditcardData])
+    const [customers, setCustomers] = useState([creditcardData]);
 
 
     useEffect(() => {
@@ -50,7 +53,8 @@ function CustomerListPage(pros: any){
                 credentials: "include",
             }).then(response => response.json())
             .then(cus => {
-                setCustomers(cus)
+                setCustomers(cus);
+                console.log(cus);
             });
     }, []);
 
@@ -65,7 +69,7 @@ function CustomerListPage(pros: any){
                 <table className="table table-striped table-bordered">
                     <thead style={{ backgroundColor: "#ADD8E6" }}>
                         <tr>
-                            <th>First Name</th>
+                            <th>Username</th>
                             <th>Credit Card Number</th>
                             <th>CVC</th>
                             <th>Expire Month</th>
@@ -83,7 +87,7 @@ function CustomerListPage(pros: any){
                             customers.map((customer) => {
                                 return (
                                     <tr key = {customer.id}>
-                                        <td>{}</td>
+                                        <td>{customer.user.username}</td>
                                         <td>{customer.creditCardNumber}</td>
                                         <td>{customer.cvc}</td>
                                         <td>{customer.expireMonth}</td>

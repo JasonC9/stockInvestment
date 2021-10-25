@@ -34,7 +34,7 @@ export default function PortfolioPage() {
     useEffect(() => {
         fetch("/holdings/getHoldings", { method: "GET", credentials: 'include', })
             .then(response => response.json())
-            .then(holdings => setHoldings(holdings))
+            .then(holdings => {setHoldings(holdings);console.log(holdings)})
     }, []);
 
     // console.log(stocks);
