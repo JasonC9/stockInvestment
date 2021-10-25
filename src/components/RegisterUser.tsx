@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Login.css';
+import { Col, Form, Row } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router";
 
@@ -14,12 +15,15 @@ function RegisterUser() {
     }
 
     const [input, setInput] = useState(user);
+    
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        
         setInput({
             ...input,
             [e.target.name]: e.target.value
         });
+        
     };
 
     const next = (e: any) => {
@@ -40,20 +44,20 @@ function RegisterUser() {
                 <h2 className="form_register">Register User</h2>
                 <div className="form_input-group">
                 <label htmlFor="name">First Name</label>
-                <input className="form_input" name="first_name" placeholder="Enter first name" required value={input.first_name}
-                onChange={handleChange}/>
+                <input className="form_input" name="first_name" placeholder="Enter first name" value={input.first_name}
+                onChange={handleChange} required />
                 </div>
 
                 <div className="form_input-group">
                 <label htmlFor="username">Username</label>
-                <input className="form_input" type="username" name="username" placeholder="Enter username" required value={input.username}
-                onChange={handleChange} />
+                <input className="form_input" type="username" name="username" placeholder="Enter username" value={input.username}
+                onChange={handleChange} required />
                 </div>
 
                 <div className="form_input-group">
                 <label htmlFor="password">Password</label>
-                <input className="form_input" type="password" name="pass_word" placeholder="Enter password" required value={input.pass_word}
-                onChange={handleChange} />
+                <input className="form_input" type="password" name="pass_word" placeholder="Enter password"  value={input.pass_word}
+                onChange={handleChange} required />
                 </div>
                
                 <button className="btn_color" type="submit" onClick={next}>Next</button><br />

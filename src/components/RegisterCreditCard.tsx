@@ -100,11 +100,6 @@ function RegisterCreditCard() {
                 </Form.Group>
             </Row>
 
-            <Form.Group className="mb-3">
-                <input type="checkbox" required/>
-                <label htmlFor="agree">Agree to submit</label>  
-            </Form.Group>
-
             <button className="btn_color" type="submit" onClick={register}>Register</button><br />
             
             <p id="regiBtn">
