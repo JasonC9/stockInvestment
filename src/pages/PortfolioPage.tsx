@@ -5,6 +5,7 @@ import Card from '../components/Card';
 import Navb from '../components/navbar';
 import Profile from '../components/Profile';
 import { isAuthenticated } from '../utilities/authenticationUtils';
+import PortfolioCard from '../components/PortfolioCard';
 
 export default function PortfolioPage() {
 
@@ -17,9 +18,14 @@ export default function PortfolioPage() {
         marketCap: 2102390,
         totalInvested: 1230012
     }
+    const initHolding = {
+        amount_held: "",
+        stock:testStock,
+
+    }
 
     const history = useHistory();
-    const [stocks, setStocks] = useState([testStock])
+    const [holdings, setHoldings] = useState([initHolding])
 
     useEffect(() => {
         (async () => {
@@ -31,24 +37,13 @@ export default function PortfolioPage() {
     }, []);
 
     useEffect(() => {
-        fetch("/holdings/getStocks", { method: "GET", credentials: 'include', })
+        fetch("/holdings/getHoldings", { method: "GET", credentials: 'include', })
             .then(response => response.json())
             .then(holdings => {setHoldings(holdings);console.log(holdings)})
     }, []);
 
     // console.log(stocks);
 
-
-    useEffect(() => {
-        let url = `/stock/findAll`;
-        fetch(url,
-            {
-                method: "GET",
-                credentials: "include",
-            }).then(response => response.json())
-            .then(cards =>{setStocks(cards)
-            });
-            },[]);
     
     return (
         <div>
@@ -59,12 +54,11 @@ export default function PortfolioPage() {
             <Grid container spacing={0}>
 
                 {
-                    stocks.map((stock) => {
+                    holdings.map((holding) => {
                         return (
-                            <Grid key={stock.stockName} item xs={6} sm={6} md={4}>
-                                <Card stock={stock} />
+                            <Grid key={holding.stock.stockName} item xs={6} sm={6} md={4}>
+                                <PortfolioCard stock={holding.stock} amount_held={holding.amount_held}/>
                             </Grid>
-
                         )
                     })
                 }

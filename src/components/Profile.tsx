@@ -17,6 +17,11 @@ function Profile(props:any)
     }
     
     const profileData = {
+        id: 1,
+        creditCardNumber: 2,
+        cvc: 3,
+        expireMonth: 4,
+        expireYear: 5,
         streetAddress: "",
         city: "",
         state: "",
@@ -24,9 +29,6 @@ function Profile(props:any)
         user: userData
     }
 
-
-
-    }
     useEffect(() => {
         (async () => {
             if (!await isAuthenticated()) {
@@ -35,17 +37,19 @@ function Profile(props:any)
             }
         })();
     }, []);
-    const [profile, setProfile] = useState([profileData]);
+    
+    const [profile, setProfile] = useState(profileData);
 
     useEffect(()=>{
-        let url='creditCard/findAll';
+        let url='/creditcard/findCreditcard';
         fetch(url,
             {
                 method:"GET",
                 credentials:"include",
             }).then(response=>response.json())
             .then(pf=>{
-                setProfile(pf)
+                setProfile(pf);
+                console.log(pf);
             });
     },[]);
 
@@ -61,12 +65,14 @@ return(
             <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
             src='https://st2.depositphotos.com/5682790/10456/v/600/depositphotos_104564156-stock-illustration-male-user-icon.jpg'/>
             <br/>
-            <p className="user-text">User</p>
+            <p className="user-text"> {profile.user.username} </p>
             </div>
             <div>
-                <h4>Name:</h4>
+                <h4>Name: {profile.user.first_name}</h4>
                 <div>
-                    <h4>Address</h4>
+                    <h4>Address: {
+                    `${profile.streetAddress}
+                    ${profile.city}, ${profile.state} ${profile.zipcode}`}</h4>
                 </div>
             </div>
         </div>

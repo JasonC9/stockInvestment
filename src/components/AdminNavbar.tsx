@@ -19,7 +19,7 @@ function AdminNavbar() {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" style={{backgroundColor:"#ADD8E6"}}>
             <Container>
                 <Navbar.Brand href="/admin">
                     <img src={logo} style={{ height: 100, width: 400 }} />

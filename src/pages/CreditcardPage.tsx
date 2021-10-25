@@ -7,7 +7,7 @@ export default function CreditcardPage() {
     // const id = useParams();
 
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
+        <div>
             <Grid container direction="column" alignItems="center" justify="center">
                 <RegisterCreditCard />
             </Grid>

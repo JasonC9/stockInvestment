@@ -33,8 +33,7 @@ function App() {
   //   .then(response => response.text())
   //   .then(message => setMessage(message));
   // });
-
-  const [users, setUsers] = useState<IState["users"]>([])
+  
 
   return (
     

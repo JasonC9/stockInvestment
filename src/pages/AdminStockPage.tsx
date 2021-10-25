@@ -47,7 +47,7 @@ export default function StockPage() {
     }, []);
 
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
+        <div >
             <AdminNavbar />
             <Container fluid >
                 <Row>

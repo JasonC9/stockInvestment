@@ -19,7 +19,7 @@ function Navb() {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light">
+        <Navbar collapseOnSelect expand="lg" style={{backgroundColor:"#ADD8E6"}} >
             <Container>
                 <Navbar.Brand href="/mjinvestments/home">
                     <img src={logo} style={{ height: 100, width: 400 }} />

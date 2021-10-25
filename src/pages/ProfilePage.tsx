@@ -6,7 +6,7 @@ export default function ProfilePage()
 {
 
     return (
-        <div style={{ backgroundColor: "#ADD8E6" }}>
+        <div >
             <Navb />
             <Profile />
 
