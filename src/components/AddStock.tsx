@@ -37,9 +37,10 @@ function AddStock() {
         let addStock = {img: input.img, stockName: input.stockName,  description: input.description, totalInvested: input.totalInvested, marketCap: input.marketCap, price: input.price};
         console.log('addStock' + JSON.stringify(addStock));
 
-        let response = fetch("/stock", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(addStock)})
+        fetch("/stock", {method:"POST", headers:{"Content-Type":"application/json"}, credentials:"include", body: JSON.stringify(addStock)})
         .then(() => {
-            history.push('/admin');
+             alert("Stock Added Successfully!")
+             history.push('/admin');   
         });  
 
     }
