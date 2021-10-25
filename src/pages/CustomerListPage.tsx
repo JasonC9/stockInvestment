@@ -30,7 +30,7 @@ function CustomerListPage(pros: any){
     }
 
 
-    const [users, setUsers] = useState([{creditcardData,userData}])
+    //const [users, setUsers] = useState([{creditcardData,userData}])
 
     useEffect(() => {
         (async () => {
